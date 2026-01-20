@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Gemini</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Header*/ 
+        .header1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(to right, #ff0000, #000000);
+            padding: 10px 20px;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0px 20px;
+        }
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: block;
+            position: absolute;
+            background: linear-gradient(to right, #ff0000, #000000);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        }
+
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 10px;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: darkred;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .hero {
+            background-image: url('home_background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        .hero button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .featured-cars, .testimonials, .contact {
+            background-color: #fff;
+            margin: 20px 0;
+        }
+        .car-item, .testimonial-item, .contact-item {
+            margin: 20px;
+        }
+        .contact_btn:hover{
+            background-color: rgba(42, 98, 188, 0.92);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .car-card {
+            text-align: center;
+            background: rgb(76, 72, 72);
+            padding: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .car-basic-info {
+            margin-bottom: 10px;
+        }
+
+        .car-details {
+            position: absolute;
+            bottom: -500%;
+            left: 0;
+            right: 0;
+            background: rgba(76, 72, 72, 0.95);
+            padding: 5px;
+            transition: all 0.5s ease;
+        }
+
+        .car-card:hover .car-details {
+            bottom: 5px;
+        }
+
+        .car-specs {
+            color: rgb(190, 181, 181);
+            text-align: left;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="Logo_Final.png" style="padding: 5px;">
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#featured-cars">Featured Cars</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <div class="dropdown"> 
+                <a href="#" style="color: rgb(253, 252, 252);text-decoration: none;text-align: center;transition: background-color 0.3s, color 0.3s;" >Menu</a>
+                <div class="dropdown-content">
+                    <a href="carsvideo.html">Video</a>
+                    <a href="car_details.html">Car Details</a>
+                    <a href="Login_Register.html">Login</a>
+                </div>
+        </div>
+    </nav>
+</header>
+s
+<section id="hero" class="hero">
+    <h1 style="color: #d33636;">Discover the Future of Automobiles!</h1>
+    <p style="color: #d33636;">Latest Models, Reviews, and News at Your Fingertips</p>
+    <button class="btn btn-success" onclick="location.href='Login_Register.html'">Login</button>
+</section>
+
+<section id="about" class="section">
+    <h2>Our Mission</h2>
+    <p>At Car Gemini, we're passionate about cars. Our mission is to provide car lovers and enthusiasts with the latest information, reviews, and news about the automotive industry. Whether you're looking for the latest model releases or in-depth reviews, we've got you covered.</p>
+</section>
+
+<section id="featured-cars" class="section featured-cars">
+    <div style="padding: 20px;">
+        <h1 style="color: rgb(0, 0, 0); text-align: center;padding-bottom: 20px;">Featured Cars of the Month</h1>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+            <div class="car-card">
+                <img src="R8.avif" alt="Car 1" style="width: 100%; border-radius: 10px;">
+                <div class="car-basic-info">
+                    <h3 style="color: rgb(243, 243, 243);">Audi R8</h3>
+                    <p style="color: rgb(190, 181, 181);">Luxury Sports Car</p>
+                    <p style="color: rgb(190, 181, 181);">Hover on to see feature</p>
+                </div>
+                <div class="car-details">
+                    <div class="car-specs">
+                        <p>Brand: Audi</p>
+                        <p>Model: R8</p>
+                        <p>Engine: 5204 cc</p>
+                        <p>Mileage: 5.71 kmpl</p>
+                        <p>Transmission: Auto</p>
+                        <p>Fuel: Petrol</p>
+                        <p>Seats: 2</p>
+                        <p>Price: 1.5cr</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="M4.webp" alt="Car 2" style="width: 100%; border-radius: 10px;">
+                <div class="car-basic-info">
+                    <h3 style="color: rgb(243, 243, 243);">BMW M4</h3>
+                    <p style="color: rgb(190, 181, 181);">Performance Sedan</p>
+                    <p style="color: rgb(190, 181, 181);">Hover on to see feature</p>
+                </div>
+                <div class="car-details">
+                    <div class="car-specs">
+                        <p>Brand: BMW</p>
+                        <p>Model: M4</p>
+                        <p>Engine: 2993 cc</p>
+                        <p>Mileage: 9.71 kmpl</p>
+                        <p>Transmission: Auto</p>
+                        <p>Fuel: Petrol</p>
+                        <p>Seats: 4</p>
+                        <p>Price: 1.5cr</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="Porsche.webp" alt="Car 3" style="width: 100%; border-radius: 10px;">
+                <div class="car-basic-info">
+                    <h3 style="color: rgb(243, 243, 243);">Porsche Carrera 4 GTS</h3>
+                    <p style="color: rgb(190, 181, 181);">Sports Car</p>
+                    <p style="color: rgb(190, 181, 181);">Hover on to see feature</p>
+                </div>
+                <div class="car-details">
+                    <div class="car-specs">
+                        <p>Brand: Porsche</p>
+                        <p>Model: Carrera 4 GTS</p>
+                        <p>Engine: 3996 cc</p>
+                        <p>Mileage: 10.46 kmpl</p>
+                        <p>Transmission: Auto</p>
+                        <p>Fuel: Petrol</p>
+                        <p>Seats: 2,4</p>
+                        <p>Price: 1.5cr</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="section testimonials">
+    <h2>Customer Testimonials</h2>
+    <div class="testimonial-item">
+        <p>"Car Gemini has become my go-to source for all things automotive. The reviews are spot on, and the news section keeps me up-to-date with the latest trends." <br> — Ankit Patel, Ahmedabad</p>
+    </div>
+    <div class="testimonial-item">
+        <p>"I recently purchased a car based on a recommendation from Car Gemini, and I couldn't be happier. Their reviews are thorough and trustworthy." <br> — Rhea Sharma, Mumbai</p>
+    </div>
+</section>
+
+<section id="contact" class="section contact">
+    <h2>Get in Touch</h2>
+    <p>Have questions or need more information? Reach out to us through our contact form, and we'll get back to you as soon as possible.</p>
+    <button onclick="location.href='contact.html'"  class="btn btn-primary contact_btn">Contact Us</button>
+</section>
+
+<footer>
+    <p>Follow Us</p>
+    <a href="https://www.facebook.com/share/1QPgGkA3rq/?mibextid=qi2Omg">Facebook</a> | <a href="http://t.me/darshit_999">Telegram</a> | <a href="https://www.instagram.com/darshit4199?igsh=bGFpMXl5YzN0aWoz">Instagram</a>
+</footer>
+
+</body>
+</html>
